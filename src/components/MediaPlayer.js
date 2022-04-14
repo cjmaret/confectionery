@@ -204,6 +204,7 @@ const MediaPlayer = ({
                   ) : (
                     <div className="vr-player">
                       <iframe
+                      scrolling='no'
                         src={
                           video.embeddedUrl.split('?').length > 1
                             ? video.embeddedUrl +

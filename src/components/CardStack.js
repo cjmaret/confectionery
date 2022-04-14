@@ -75,12 +75,12 @@ const Deck = ({
   );
 
   useEffect(() => {
-    setTimeout(() => {
+    // setTimeout(() => {
       const container = document.querySelector('.slider-container');
       if (container) {
         container.style.opacity = '1';
       }
-    }, 500);
+    // }, 500);
   }, [showCards, currentClickId, infoBtnClicked]);
 
   useEffect(() => {
@@ -95,12 +95,12 @@ const Deck = ({
         return from(i);
       });
 
-      timer = setTimeout(() => {
+      // timer = setTimeout(() => {
         const container = document.querySelector('.slider-container');
         if (container) {
           container.style.opacity = '0';
         }
-      }, 1000);
+      // }, 1000);
     }
   }, [fadeoutCards]);
 
