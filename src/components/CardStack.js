@@ -27,7 +27,7 @@ const Deck = ({
     y: 0,
     scale: 1,
     rot: (((cards.length - i) % 3) - 1) * 2,
-    delay: i * 50,
+    delay: 0,
   });
 
   const directionBtns = ['leftArrow', 'rightArrow'];
@@ -76,10 +76,10 @@ const Deck = ({
 
   useEffect(() => {
     // setTimeout(() => {
-      const container = document.querySelector('.slider-container');
-      if (container) {
-        container.style.opacity = '1';
-      }
+    const container = document.querySelector('.slider-container');
+    if (container) {
+      container.style.opacity = '1';
+    }
     // }, 500);
   }, [showCards, currentClickId, infoBtnClicked]);
 
@@ -96,10 +96,10 @@ const Deck = ({
       });
 
       // timer = setTimeout(() => {
-        const container = document.querySelector('.slider-container');
-        if (container) {
-          container.style.opacity = '0';
-        }
+      const container = document.querySelector('.slider-container');
+      if (container) {
+        container.style.opacity = '0';
+      }
       // }, 1000);
     }
   }, [fadeoutCards]);
